@@ -1,0 +1,14 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"E:/unreal project/StarshipSimulator/StarshipSimulator/Content/StarterContent/Architecture/Floor_400x400.uasset",
+				"E:/unreal project/StarshipSimulator/StarshipSimulator/Content/MyFiles/Level/Space1.umap",
+				"E:/UE 5.4/UE_5.4/Engine/Content/EngineSky/BP_Sky_Sphere.uasset"
+			]
+		}
+	]
+}

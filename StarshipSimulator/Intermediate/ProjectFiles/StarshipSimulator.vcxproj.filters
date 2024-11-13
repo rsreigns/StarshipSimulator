@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\StarshipSimulator.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\StarshipSimulator.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\StarshipSimulatorEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\StarshipSimulator">
+      <UniqueIdentifier>{DC95E649-B84A-3596-A9D4-58A71B325234}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\StarshipSimulator\StarshipSimulator.Build.cs">
+      <Filter>Source\StarshipSimulator</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\StarshipSimulator\StarshipSimulator.cpp">
+      <Filter>Source\StarshipSimulator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\StarshipSimulator\StarshipSimulator.h">
+      <Filter>Source\StarshipSimulator</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

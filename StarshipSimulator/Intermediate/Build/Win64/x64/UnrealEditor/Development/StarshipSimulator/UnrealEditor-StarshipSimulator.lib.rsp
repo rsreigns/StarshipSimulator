@@ -1,0 +1,12 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-StarshipSimulator.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"E:\unreal project\StarshipSimulator\StarshipSimulator\Intermediate\Build\Win64\x64\StarshipSimulatorEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"E:\unreal project\StarshipSimulator\StarshipSimulator\Intermediate\Build\Win64\x64\UnrealEditor\Development\StarshipSimulator\StarshipSimulator.cpp.obj"
+"E:\unreal project\StarshipSimulator\StarshipSimulator\Intermediate\Build\Win64\x64\UnrealEditor\Development\StarshipSimulator\Default.rc2.res"
+/OUT:"E:\unreal project\StarshipSimulator\StarshipSimulator\Intermediate\Build\Win64\x64\UnrealEditor\Development\StarshipSimulator\UnrealEditor-StarshipSimulator.lib"

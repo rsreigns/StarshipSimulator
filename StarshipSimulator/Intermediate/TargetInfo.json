@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "StarshipSimulator",
+			"Path": "..\\Source\\StarshipSimulator.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "StarshipSimulatorEditor",
+			"Path": "..\\Source\\StarshipSimulatorEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"E:\\unreal project\\StarshipSimulator\\StarshipSimulator\\Source\\StarshipSimulator\\StarshipSimulator.Build.cs",
+		"E:\\unreal project\\StarshipSimulator\\StarshipSimulator\\Source\\StarshipSimulator.Target.cs",
+		"E:\\unreal project\\StarshipSimulator\\StarshipSimulator\\Source\\StarshipSimulatorEditor.Target.cs"
+	],
+	"EngineVersion": "5.4.4"
+}
