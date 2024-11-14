@@ -20,12 +20,13 @@ ABaseShip::ABaseShip()
 	ShipMesh = CreateDefaultSubobject<UStaticMeshComponent>("ShipMesh");
 	BaseASC = CreateDefaultSubobject<UBaseASC>("BaseASC");
 	BaseAttributes = CreateDefaultSubobject<UBaseAttributes>("BaseAttributes");
+
+	//OnTakeAnyDamage.AddDynamic(this,&ThisClass::OnTakeDamage);
 }
 
 void ABaseShip::BeginPlay()
 {
 	Super::BeginPlay();
-	
 }
 
 
@@ -52,4 +53,12 @@ void ABaseShip::PossessedBy(AController* NewController)
 	Super::PossessedBy(NewController);
 	BaseASC->InitAbilityActorInfo(this,this);
 }
+
+/*
+void ABaseShip::OnTakeDamage(AActor* DamagedActor, float Damage, const class UDamageType* DamageType,
+	class AController* InstigatedBy, AActor* DamageCauser)
+{
+	
+}
+*/
 

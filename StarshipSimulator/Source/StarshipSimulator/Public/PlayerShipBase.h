@@ -10,6 +10,7 @@
 class UCameraComponent;
 class USpringArmComponent;
 class UPlayerWidget;
+class USceneComponent;
 
 class UGameplayAbility;
 class UInputMappingContext;
@@ -31,7 +32,8 @@ public:
 	USpringArmComponent* SpringArm;
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite, Category="Components")
 	UPlayerWidget* Widget;
-	
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite, Category="Components")
+	USceneComponent* MissileSocket;
 	
 #pragma endregion
 	
@@ -39,6 +41,7 @@ public:
 	
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 	virtual UPlayerWidget* GetUIComponent() const override;
+	virtual void UpdateScannedActors(TArray<AActor*> ScannedActors) const override;
 
 #pragma endregion
 	
@@ -83,7 +86,10 @@ public:
 #pragma endregion
 
 #pragma region Getters
-	
+	UCameraComponent* GetCamera() const { return Camera; }
+	USpringArmComponent* GetSpringArm() const { return SpringArm; }
+	UPlayerWidget* GetPlayerWidget() const { return Widget; }
+	USceneComponent* GetMissileSocket() const { return MissileSocket; }
 #pragma endregion
 	
 };

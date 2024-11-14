@@ -49,7 +49,9 @@ public:
 #pragma endregion
 
 #pragma region CoreFunctions
-	
+	/*UFUNCTION()
+	void OnTakeDamage(AActor* DamagedActor, float Damage, const class UDamageType* DamageType, 
+	class AController* InstigatedBy, AActor* DamageCauser);*/
 #pragma endregion
 
 

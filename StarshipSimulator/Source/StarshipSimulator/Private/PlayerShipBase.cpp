@@ -9,6 +9,7 @@
 #include "Camera/CameraComponent.h"
 #include "Components/PlayerWidget.h"
 #include "GameFramework/SpringArmComponent.h"
+#include "Components/SceneComponent.h"
 
 // Custom Classes
 
@@ -19,6 +20,9 @@ APlayerShipBase::APlayerShipBase()
 	Camera->SetupAttachment(SpringArm);
 
 	Widget = CreateDefaultSubobject<UPlayerWidget>("Widget");
+
+	MissileSocket = CreateDefaultSubobject<USceneComponent>("MissileSocket");
+	MissileSocket->SetupAttachment(GetShipMesh());
 }
 
 void APlayerShipBase::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
@@ -45,6 +49,10 @@ void APlayerShipBase::SetupPlayerInputComponent(class UInputComponent* PlayerInp
 UPlayerWidget* APlayerShipBase::GetUIComponent() const
 {
 	return Widget;
+}
+
+void APlayerShipBase::UpdateScannedActors(TArray<AActor*> ScannedActors) const
+{
 }
 
 void APlayerShipBase::InteractStart(const FInputActionValue& Value)

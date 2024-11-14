@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define STARSHIPSIMULATOR_PlayerShipBase_generated_h
 
-#define FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_PlayerShipBase_h_22_INCLASS_NO_PURE_DECLS \
+#define FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_PlayerShipBase_h_23_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAPlayerShipBase(); \
 	friend struct Z_Construct_UClass_APlayerShipBase_Statics; \
@@ -24,7 +24,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<APlayerShipBase*>(this); }
 
 
-#define FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_PlayerShipBase_h_22_ENHANCED_CONSTRUCTORS \
+#define FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_PlayerShipBase_h_23_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	APlayerShipBase(APlayerShipBase&&); \
@@ -36,12 +36,12 @@ public: \
 	NO_API virtual ~APlayerShipBase();
 
 
-#define FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_PlayerShipBase_h_19_PROLOG
-#define FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_PlayerShipBase_h_22_GENERATED_BODY \
+#define FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_PlayerShipBase_h_20_PROLOG
+#define FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_PlayerShipBase_h_23_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_PlayerShipBase_h_22_INCLASS_NO_PURE_DECLS \
-	FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_PlayerShipBase_h_22_ENHANCED_CONSTRUCTORS \
+	FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_PlayerShipBase_h_23_INCLASS_NO_PURE_DECLS \
+	FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_PlayerShipBase_h_23_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

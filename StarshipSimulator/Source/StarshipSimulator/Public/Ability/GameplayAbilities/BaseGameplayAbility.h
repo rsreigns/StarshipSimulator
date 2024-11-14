@@ -13,5 +13,8 @@ UCLASS()
 class STARSHIPSIMULATOR_API UBaseGameplayAbility : public UGameplayAbility
 {
 	GENERATED_BODY()
+public:
+	UFUNCTION(BlueprintCallable, Category = "Ability")
+	virtual void InitiateAbility() ;
 	
 };

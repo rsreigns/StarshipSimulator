@@ -12,6 +12,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerShipBase() {}
 // Begin Cross Module References
 ENGINE_API UClass* Z_Construct_UClass_APlayerController_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputAction_NoRegister();
 ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputMappingContext_NoRegister();
@@ -52,6 +53,11 @@ struct Z_Construct_UClass_APlayerShipBase_Statics
 		{ "ModuleRelativePath", "Public/PlayerShipBase.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Widget_MetaData[] = {
+		{ "Category", "Components" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/PlayerShipBase.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MissileSocket_MetaData[] = {
 		{ "Category", "Components" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/PlayerShipBase.h" },
@@ -118,6 +124,7 @@ struct Z_Construct_UClass_APlayerShipBase_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Camera;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SpringArm;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Widget;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_MissileSocket;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_InputContext;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_InteractAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_LookAction;
@@ -136,6 +143,7 @@ struct Z_Construct_UClass_APlayerShipBase_Statics
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerShipBase_Statics::NewProp_Camera = { "Camera", nullptr, (EPropertyFlags)0x001000000009000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerShipBase, Camera), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Camera_MetaData), NewProp_Camera_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerShipBase_Statics::NewProp_SpringArm = { "SpringArm", nullptr, (EPropertyFlags)0x001000000009000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerShipBase, SpringArm), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SpringArm_MetaData), NewProp_SpringArm_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerShipBase_Statics::NewProp_Widget = { "Widget", nullptr, (EPropertyFlags)0x001000000009000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerShipBase, Widget), Z_Construct_UClass_UPlayerWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Widget_MetaData), NewProp_Widget_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerShipBase_Statics::NewProp_MissileSocket = { "MissileSocket", nullptr, (EPropertyFlags)0x001000000009000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerShipBase, MissileSocket), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MissileSocket_MetaData), NewProp_MissileSocket_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerShipBase_Statics::NewProp_InputContext = { "InputContext", nullptr, (EPropertyFlags)0x0010000000010015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerShipBase, InputContext), Z_Construct_UClass_UInputMappingContext_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InputContext_MetaData), NewProp_InputContext_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerShipBase_Statics::NewProp_InteractAction = { "InteractAction", nullptr, (EPropertyFlags)0x0010000000010015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerShipBase, InteractAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InteractAction_MetaData), NewProp_InteractAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerShipBase_Statics::NewProp_LookAction = { "LookAction", nullptr, (EPropertyFlags)0x0010000000010015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerShipBase, LookAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LookAction_MetaData), NewProp_LookAction_MetaData) };
@@ -147,6 +155,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APlayerSh
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerShipBase_Statics::NewProp_Camera,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerShipBase_Statics::NewProp_SpringArm,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerShipBase_Statics::NewProp_Widget,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerShipBase_Statics::NewProp_MissileSocket,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerShipBase_Statics::NewProp_InputContext,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerShipBase_Statics::NewProp_InteractAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerShipBase_Statics::NewProp_LookAction,
@@ -199,10 +208,10 @@ APlayerShipBase::~APlayerShipBase() {}
 struct Z_CompiledInDeferFile_FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_PlayerShipBase_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_APlayerShipBase, APlayerShipBase::StaticClass, TEXT("APlayerShipBase"), &Z_Registration_Info_UClass_APlayerShipBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerShipBase), 1507126417U) },
+		{ Z_Construct_UClass_APlayerShipBase, APlayerShipBase::StaticClass, TEXT("APlayerShipBase"), &Z_Registration_Info_UClass_APlayerShipBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerShipBase), 3959649102U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_PlayerShipBase_h_4051362725(TEXT("/Script/StarshipSimulator"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_PlayerShipBase_h_4276298699(TEXT("/Script/StarshipSimulator"),
 	Z_CompiledInDeferFile_FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_PlayerShipBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_PlayerShipBase_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

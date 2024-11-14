@@ -3,3 +3,7 @@
 
 #include "Ability/GameplayAbilities/BaseGameplayAbility.h"
 
+void UBaseGameplayAbility::InitiateAbility()
+{
+	
+}
