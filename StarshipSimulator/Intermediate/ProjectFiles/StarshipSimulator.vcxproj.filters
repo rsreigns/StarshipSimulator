@@ -11,6 +11,8 @@
     <None Include="..\..\Source\StarshipSimulatorEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.vsconfig" />
+    <None Include="..\..\Clouds_and_Skies.png" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -37,6 +39,36 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\StarshipSimulator\StarshipSimulator.h">
       <Filter>Source\StarshipSimulator</Filter>
+    </ClInclude>
+    <Filter Include="Source\StarshipSimulator\Private">
+      <UniqueIdentifier>{17805743-33F2-37D7-9678-A13FBE55A688}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\StarshipSimulator\Private\BaseShip.cpp">
+      <Filter>Source\StarshipSimulator\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\StarshipSimulator\Private\PlayerShipBase.cpp">
+      <Filter>Source\StarshipSimulator\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\StarshipSimulator\Private\Ability">
+      <UniqueIdentifier>{55538CAF-BAE7-36C7-89B9-C01E8A4139AD}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\StarshipSimulator\Private\Ability\BaseASC.cpp">
+      <Filter>Source\StarshipSimulator\Private\Ability</Filter>
+    </ClCompile>
+    <Filter Include="Source\StarshipSimulator\Public">
+      <UniqueIdentifier>{50C23ECA-C07D-36AB-B2AC-5129E6F9B0EF}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\StarshipSimulator\Public\BaseShip.h">
+      <Filter>Source\StarshipSimulator\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\StarshipSimulator\Public\PlayerShipBase.h">
+      <Filter>Source\StarshipSimulator\Public</Filter>
+    </ClInclude>
+    <Filter Include="Source\StarshipSimulator\Public\Ability">
+      <UniqueIdentifier>{604FC7F0-E813-356D-B29C-A832CE55CB03}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\StarshipSimulator\Public\Ability\BaseASC.h">
+      <Filter>Source\StarshipSimulator\Public\Ability</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

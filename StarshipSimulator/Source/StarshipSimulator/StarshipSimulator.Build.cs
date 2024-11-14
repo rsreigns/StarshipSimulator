@@ -8,7 +8,13 @@ public class StarshipSimulator : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput" });
+		PublicDependencyModuleNames.AddRange(new string[]
+		{
+			"Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput",
+			"UMG", "AIModule", "EnhancedInput", "GameplayAbilities",
+			"GameplayTasks", "AnimGraphRuntime"
+			
+		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 

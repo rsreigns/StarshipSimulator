@@ -1,0 +1,21 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\unreal project\\starshipsimulator\\starshipsimulator\\intermediate\\build\\win64\\unrealeditor\\inc\\starshipsimulator\\uht\\playershipbase.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\unreal project\\starshipsimulator\\starshipsimulator\\intermediate\\build\\win64\\x64\\starshipsimulatoreditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "e:\\unreal project\\starshipsimulator\\starshipsimulator\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\starshipsimulator\\definitions.starshipsimulator.h",
+            "e:\\unreal project\\starshipsimulator\\starshipsimulator\\source\\starshipsimulator\\public\\playershipbase.h",
+            "e:\\unreal project\\starshipsimulator\\starshipsimulator\\source\\starshipsimulator\\public\\baseship.h",
+            "e:\\ue 5.4\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\abilitysysteminterface.h",
+            "e:\\ue 5.4\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\abilitysysteminterface.generated.h",
+            "e:\\unreal project\\starshipsimulator\\starshipsimulator\\intermediate\\build\\win64\\unrealeditor\\inc\\starshipsimulator\\uht\\baseship.generated.h",
+            "e:\\unreal project\\starshipsimulator\\starshipsimulator\\source\\starshipsimulator\\public\\interface\\playeruiinterface.h",
+            "e:\\unreal project\\starshipsimulator\\starshipsimulator\\intermediate\\build\\win64\\unrealeditor\\inc\\starshipsimulator\\uht\\playeruiinterface.generated.h",
+            "e:\\unreal project\\starshipsimulator\\starshipsimulator\\intermediate\\build\\win64\\unrealeditor\\inc\\starshipsimulator\\uht\\playershipbase.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

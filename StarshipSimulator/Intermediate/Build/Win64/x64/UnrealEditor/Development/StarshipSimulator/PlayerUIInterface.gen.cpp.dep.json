@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\unreal project\\starshipsimulator\\starshipsimulator\\intermediate\\build\\win64\\unrealeditor\\inc\\starshipsimulator\\uht\\playeruiinterface.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\unreal project\\starshipsimulator\\starshipsimulator\\intermediate\\build\\win64\\x64\\starshipsimulatoreditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "e:\\unreal project\\starshipsimulator\\starshipsimulator\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\starshipsimulator\\definitions.starshipsimulator.h",
+            "e:\\unreal project\\starshipsimulator\\starshipsimulator\\source\\starshipsimulator\\public\\interface\\playeruiinterface.h",
+            "e:\\unreal project\\starshipsimulator\\starshipsimulator\\intermediate\\build\\win64\\unrealeditor\\inc\\starshipsimulator\\uht\\playeruiinterface.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
