@@ -57,7 +57,21 @@
             "e:\\unreal project\\starshipsimulator\\starshipsimulator\\intermediate\\build\\win64\\unrealeditor\\inc\\starshipsimulator\\uht\\baseship.generated.h",
             "e:\\unreal project\\starshipsimulator\\starshipsimulator\\source\\starshipsimulator\\public\\interface\\playeruiinterface.h",
             "e:\\unreal project\\starshipsimulator\\starshipsimulator\\intermediate\\build\\win64\\unrealeditor\\inc\\starshipsimulator\\uht\\playeruiinterface.generated.h",
-            "e:\\unreal project\\starshipsimulator\\starshipsimulator\\intermediate\\build\\win64\\unrealeditor\\inc\\starshipsimulator\\uht\\playershipbase.generated.h"
+            "e:\\unreal project\\starshipsimulator\\starshipsimulator\\intermediate\\build\\win64\\unrealeditor\\inc\\starshipsimulator\\uht\\playershipbase.generated.h",
+            "e:\\unreal project\\starshipsimulator\\starshipsimulator\\source\\starshipsimulator\\public\\ability\\baseasc.h",
+            "e:\\ue 5.4\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\abilitysystemcomponent.h",
+            "e:\\ue 5.4\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\gameplaycueinterface.h",
+            "e:\\ue 5.4\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\gameplaycueinterface.generated.h",
+            "e:\\ue 5.4\\ue_5.4\\engine\\source\\runtime\\gameplaytasks\\classes\\gameplaytaskscomponent.h",
+            "e:\\ue 5.4\\ue_5.4\\engine\\source\\runtime\\gameplaytasks\\classes\\gameplaytaskresource.h",
+            "e:\\ue 5.4\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplaytasks\\uht\\gameplaytaskresource.generated.h",
+            "e:\\ue 5.4\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplaytasks\\uht\\gameplaytaskscomponent.generated.h",
+            "e:\\ue 5.4\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\abilities\\gameplayabilityrepanimmontage.h",
+            "e:\\ue 5.4\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\gameplayabilityrepanimmontage.generated.h",
+            "e:\\ue 5.4\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\abilitysystemreplicationproxyinterface.h",
+            "e:\\ue 5.4\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\abilitysystemreplicationproxyinterface.generated.h",
+            "e:\\ue 5.4\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\abilitysystemcomponent.generated.h",
+            "e:\\unreal project\\starshipsimulator\\starshipsimulator\\intermediate\\build\\win64\\unrealeditor\\inc\\starshipsimulator\\uht\\baseasc.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

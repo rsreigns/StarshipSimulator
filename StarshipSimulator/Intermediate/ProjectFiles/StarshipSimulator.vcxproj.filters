@@ -13,6 +13,10 @@
     </None>
     <None Include="..\..\.vsconfig" />
     <None Include="..\..\Clouds_and_Skies.png" />
+    <None Include="..\..\global.json.json" />
+    <None Include="..\..\qodana.yaml" />
+    <None Include="..\..\StarshipSimulator.sln.DotSettings.user" />
+    <None Include="..\..\UpgradeLog.htm" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -25,12 +29,18 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultGameplayTags.ini">
+      <Filter>Config</Filter>
+    </None>
     <None Include="..\..\Config\DefaultInput.ini">
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\StarshipSimulator">
       <UniqueIdentifier>{DC95E649-B84A-3596-A9D4-58A71B325234}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\StarshipSimulator\DebugHelper.h">
+      <Filter>Source\StarshipSimulator</Filter>
+    </ClInclude>
     <None Include="..\..\Source\StarshipSimulator\StarshipSimulator.Build.cs">
       <Filter>Source\StarshipSimulator</Filter>
     </None>
@@ -46,6 +56,9 @@
     <ClCompile Include="..\..\Source\StarshipSimulator\Private\BaseShip.cpp">
       <Filter>Source\StarshipSimulator\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\StarshipSimulator\Private\EnemyHealthWidget.cpp">
+      <Filter>Source\StarshipSimulator\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\StarshipSimulator\Private\PlayerShipBase.cpp">
       <Filter>Source\StarshipSimulator\Private</Filter>
     </ClCompile>
@@ -55,10 +68,61 @@
     <ClCompile Include="..\..\Source\StarshipSimulator\Private\Ability\BaseASC.cpp">
       <Filter>Source\StarshipSimulator\Private\Ability</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\StarshipSimulator\Private\Ability\BaseAttributes.cpp">
+      <Filter>Source\StarshipSimulator\Private\Ability</Filter>
+    </ClCompile>
+    <Filter Include="Source\StarshipSimulator\Private\Ability\GameplayAbilities">
+      <UniqueIdentifier>{5A8C5D7F-28F8-35A2-BD28-1FEE3D9F2B0A}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\StarshipSimulator\Private\Ability\GameplayAbilities\BaseGameplayAbility.cpp">
+      <Filter>Source\StarshipSimulator\Private\Ability\GameplayAbilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\StarshipSimulator\Private\Ability\GameplayAbilities\PlayerGABase.cpp">
+      <Filter>Source\StarshipSimulator\Private\Ability\GameplayAbilities</Filter>
+    </ClCompile>
+    <Filter Include="Source\StarshipSimulator\Private\Ability\GameplayAbilities\Player">
+      <UniqueIdentifier>{985C1798-772D-35EB-B26B-6DB3C19A24F4}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\StarshipSimulator\Private\Ability\GameplayAbilities\Player\Native_GAMissile.cpp">
+      <Filter>Source\StarshipSimulator\Private\Ability\GameplayAbilities\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\StarshipSimulator\Private\Ability\GameplayAbilities\Player\Native_GA_LockTarget.cpp">
+      <Filter>Source\StarshipSimulator\Private\Ability\GameplayAbilities\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\StarshipSimulator\Private\Ability\GameplayAbilities\Player\Native_GA_ScanHostiles.cpp">
+      <Filter>Source\StarshipSimulator\Private\Ability\GameplayAbilities\Player</Filter>
+    </ClCompile>
+    <Filter Include="Source\StarshipSimulator\Private\Actors">
+      <UniqueIdentifier>{93557BD8-FBE1-3CD5-9641-D56F4E5C0858}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\StarshipSimulator\Private\Actors\Missile.cpp">
+      <Filter>Source\StarshipSimulator\Private\Actors</Filter>
+    </ClCompile>
+    <Filter Include="Source\StarshipSimulator\Private\Components">
+      <UniqueIdentifier>{3FFFD8DD-DDAF-395B-B66C-C2764E988D8F}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\StarshipSimulator\Private\Components\PlayerWidget.cpp">
+      <Filter>Source\StarshipSimulator\Private\Components</Filter>
+    </ClCompile>
+    <Filter Include="Source\StarshipSimulator\Private\EnemyShips">
+      <UniqueIdentifier>{61EFDC66-31D1-359A-B04B-15B7E981B4DA}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\StarshipSimulator\Private\EnemyShips\EnemyShipBase.cpp">
+      <Filter>Source\StarshipSimulator\Private\EnemyShips</Filter>
+    </ClCompile>
+    <Filter Include="Source\StarshipSimulator\Private\Interface">
+      <UniqueIdentifier>{497DA555-9481-3FC8-93CD-8860447B60C0}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\StarshipSimulator\Private\Interface\PlayerUIInterface.cpp">
+      <Filter>Source\StarshipSimulator\Private\Interface</Filter>
+    </ClCompile>
     <Filter Include="Source\StarshipSimulator\Public">
       <UniqueIdentifier>{50C23ECA-C07D-36AB-B2AC-5129E6F9B0EF}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\StarshipSimulator\Public\BaseShip.h">
+      <Filter>Source\StarshipSimulator\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\StarshipSimulator\Public\EnemyHealthWidget.h">
       <Filter>Source\StarshipSimulator\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\StarshipSimulator\Public\PlayerShipBase.h">
@@ -69,6 +133,54 @@
     </Filter>
     <ClInclude Include="..\..\Source\StarshipSimulator\Public\Ability\BaseASC.h">
       <Filter>Source\StarshipSimulator\Public\Ability</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\StarshipSimulator\Public\Ability\BaseAttributes.h">
+      <Filter>Source\StarshipSimulator\Public\Ability</Filter>
+    </ClInclude>
+    <Filter Include="Source\StarshipSimulator\Public\Ability\GameplayAbilities">
+      <UniqueIdentifier>{13973708-BC49-3E0D-BD0F-9063A261B189}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\StarshipSimulator\Public\Ability\GameplayAbilities\BaseGameplayAbility.h">
+      <Filter>Source\StarshipSimulator\Public\Ability\GameplayAbilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\StarshipSimulator\Public\Ability\GameplayAbilities\PlayerGABase.h">
+      <Filter>Source\StarshipSimulator\Public\Ability\GameplayAbilities</Filter>
+    </ClInclude>
+    <Filter Include="Source\StarshipSimulator\Public\Ability\GameplayAbilities\Player">
+      <UniqueIdentifier>{7FAA7FE7-E3D5-3A21-8E26-825CA25DC741}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\StarshipSimulator\Public\Ability\GameplayAbilities\Player\Native_GAMissile.h">
+      <Filter>Source\StarshipSimulator\Public\Ability\GameplayAbilities\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\StarshipSimulator\Public\Ability\GameplayAbilities\Player\Native_GA_LockTarget.h">
+      <Filter>Source\StarshipSimulator\Public\Ability\GameplayAbilities\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\StarshipSimulator\Public\Ability\GameplayAbilities\Player\Native_GA_ScanHostiles.h">
+      <Filter>Source\StarshipSimulator\Public\Ability\GameplayAbilities\Player</Filter>
+    </ClInclude>
+    <Filter Include="Source\StarshipSimulator\Public\Actors">
+      <UniqueIdentifier>{E4748914-F1B3-3FA8-8C31-F949D8A0433B}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\StarshipSimulator\Public\Actors\Missile.h">
+      <Filter>Source\StarshipSimulator\Public\Actors</Filter>
+    </ClInclude>
+    <Filter Include="Source\StarshipSimulator\Public\Components">
+      <UniqueIdentifier>{68799BA3-AE2B-3729-AFD1-C492FF66CFFE}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\StarshipSimulator\Public\Components\PlayerWidget.h">
+      <Filter>Source\StarshipSimulator\Public\Components</Filter>
+    </ClInclude>
+    <Filter Include="Source\StarshipSimulator\Public\EnemyShips">
+      <UniqueIdentifier>{59440769-37EC-3479-BC8E-B48EC232CAF0}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\StarshipSimulator\Public\EnemyShips\EnemyShipBase.h">
+      <Filter>Source\StarshipSimulator\Public\EnemyShips</Filter>
+    </ClInclude>
+    <Filter Include="Source\StarshipSimulator\Public\Interface">
+      <UniqueIdentifier>{C2BEFA0F-33E2-3863-88A6-004B6ECA4266}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\StarshipSimulator\Public\Interface\PlayerUIInterface.h">
+      <Filter>Source\StarshipSimulator\Public\Interface</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

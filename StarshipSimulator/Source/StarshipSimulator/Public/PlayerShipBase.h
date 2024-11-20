@@ -11,6 +11,7 @@ class UCameraComponent;
 class USpringArmComponent;
 class UPlayerWidget;
 class USceneComponent;
+class UStaticMeshComponent;
 
 class UGameplayAbility;
 class UInputMappingContext;
@@ -25,7 +26,8 @@ public:
 	APlayerShipBase() ;
 
 #pragma region Components
-
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite, Category="Components")
+	UStaticMeshComponent* InteriorMesh;
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite, Category="Components")
 	UCameraComponent* Camera;
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite, Category="Components")
@@ -41,7 +43,7 @@ public:
 	
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 	virtual UPlayerWidget* GetUIComponent() const override;
-	virtual void UpdateScannedActors(TArray<AActor*> ScannedActors) const override;
+	virtual void UpdateScannedActors(TArray<AActor*> ScannedActors)  override;
 
 #pragma endregion
 	
@@ -72,6 +74,9 @@ public:
 	// Core
 	UPROPERTY(BlueprintReadOnly)
 	APlayerController* MyController;
+	int32 HostilesCount;
+	UPROPERTY(BlueprintReadOnly)
+	TObjectPtr<AActor>TargetLockedActor;
 	
 #pragma endregion
 
@@ -86,10 +91,12 @@ public:
 #pragma endregion
 
 #pragma region Getters
-	UCameraComponent* GetCamera() const { return Camera; }
-	USpringArmComponent* GetSpringArm() const { return SpringArm; }
-	UPlayerWidget* GetPlayerWidget() const { return Widget; }
-	USceneComponent* GetMissileSocket() const { return MissileSocket; }
+	FORCEINLINE UCameraComponent* GetCamera() const { return Camera; }
+	FORCEINLINE USpringArmComponent* GetSpringArm() const { return SpringArm; }
+	FORCEINLINE UPlayerWidget* GetPlayerWidget() const { return Widget; }
+	FORCEINLINE USceneComponent* GetMissileSocket() const { return MissileSocket; }
+	FORCEINLINE UStaticMeshComponent* GetInteriorMesh() const { return InteriorMesh; }
+	
 #pragma endregion
 	
 };

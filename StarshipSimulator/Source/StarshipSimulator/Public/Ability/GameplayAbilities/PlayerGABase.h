@@ -5,7 +5,9 @@
 #include "CoreMinimal.h"
 #include "Ability/GameplayAbilities/BaseGameplayAbility.h"
 #include "PlayerGABase.generated.h"
+
 class APlayerShipBase;
+class UGameplayEffect;
 
 UCLASS()
 class STARSHIPSIMULATOR_API UPlayerGABase : public UBaseGameplayAbility
@@ -15,5 +17,7 @@ public:
 	APlayerShipBase* GetPlayerPawn() const;
 
 	virtual void InitiateAbility() override;
+
+	FGameplayEffectSpecHandle MakeGESH(TSubclassOf<UGameplayEffect> Effect, float Magnitude);
 	
 };

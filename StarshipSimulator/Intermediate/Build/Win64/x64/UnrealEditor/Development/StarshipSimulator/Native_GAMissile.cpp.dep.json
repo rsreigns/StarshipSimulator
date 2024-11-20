@@ -1,12 +1,12 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "e:\\unreal project\\starshipsimulator\\starshipsimulator\\source\\starshipsimulator\\private\\ability\\gameplayabilities\\native_gamissile.cpp",
+        "Source": "e:\\unreal project\\starshipsimulator\\starshipsimulator\\source\\starshipsimulator\\private\\ability\\gameplayabilities\\player\\native_gamissile.cpp",
         "ProvidedModule": "",
         "PCH": "e:\\unreal project\\starshipsimulator\\starshipsimulator\\intermediate\\build\\win64\\x64\\starshipsimulatoreditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
         "Includes": [
             "e:\\unreal project\\starshipsimulator\\starshipsimulator\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\starshipsimulator\\definitions.starshipsimulator.h",
-            "e:\\unreal project\\starshipsimulator\\starshipsimulator\\source\\starshipsimulator\\public\\ability\\gameplayabilities\\native_gamissile.h",
+            "e:\\unreal project\\starshipsimulator\\starshipsimulator\\source\\starshipsimulator\\public\\ability\\gameplayabilities\\player\\native_gamissile.h",
             "e:\\unreal project\\starshipsimulator\\starshipsimulator\\source\\starshipsimulator\\public\\ability\\gameplayabilities\\playergabase.h",
             "e:\\unreal project\\starshipsimulator\\starshipsimulator\\source\\starshipsimulator\\public\\ability\\gameplayabilities\\basegameplayability.h",
             "e:\\ue 5.4\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\abilities\\gameplayability.h",
@@ -65,7 +65,12 @@
             "e:\\ue 5.4\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\projectilemovementcomponent.h",
             "e:\\ue 5.4\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\movementcomponent.h",
             "e:\\ue 5.4\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\movementcomponent.generated.h",
-            "e:\\ue 5.4\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\projectilemovementcomponent.generated.h"
+            "e:\\ue 5.4\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\projectilemovementcomponent.generated.h",
+            "e:\\ue 5.4\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\abilities\\tasks\\abilitytask_waitgameplayevent.h",
+            "e:\\ue 5.4\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\abilities\\tasks\\abilitytask.h",
+            "e:\\ue 5.4\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\abilitytask.generated.h",
+            "e:\\ue 5.4\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\abilitytask_waitgameplayevent.generated.h",
+            "e:\\unreal project\\starshipsimulator\\starshipsimulator\\source\\starshipsimulator\\debughelper.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

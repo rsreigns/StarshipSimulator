@@ -6,9 +6,8 @@
 #include "Abilities/GameplayAbility.h"
 #include "BaseGameplayAbility.generated.h"
 
-/**
- * 
- */
+class UBaseASC;
+
 UCLASS()
 class STARSHIPSIMULATOR_API UBaseGameplayAbility : public UGameplayAbility
 {
@@ -16,5 +15,9 @@ class STARSHIPSIMULATOR_API UBaseGameplayAbility : public UGameplayAbility
 public:
 	UFUNCTION(BlueprintCallable, Category = "Ability")
 	virtual void InitiateAbility() ;
+
+	UBaseASC* GetBaseASCfromAI();
+
+	FActiveGameplayEffectHandle ApplyEffectSpecHandleToTarget(FGameplayEffectSpecHandle& SpecHandle, AActor* Target);
 	
 };

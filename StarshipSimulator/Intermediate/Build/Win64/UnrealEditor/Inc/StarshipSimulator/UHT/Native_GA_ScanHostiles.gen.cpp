@@ -11,6 +11,7 @@ void EmptyLinkFunctionForGeneratedCodeNative_GA_ScanHostiles() {}
 
 // Begin Cross Module References
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
 ENGINE_API UEnum* Z_Construct_UEnum_Engine_EObjectTypeQuery();
 STARSHIPSIMULATOR_API UClass* Z_Construct_UClass_ABaseShip_NoRegister();
 STARSHIPSIMULATOR_API UClass* Z_Construct_UClass_UNative_GA_ScanHostiles();
@@ -47,11 +48,16 @@ struct Z_Construct_UClass_UNative_GA_ScanHostiles_Statics
 		{ "Category", "Ability|Scan" },
 		{ "ModuleRelativePath", "Public/Ability/GameplayAbilities/Player/Native_GA_ScanHostiles.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ScanSound_MetaData[] = {
+		{ "Category", "Ability|Scan" },
+		{ "ModuleRelativePath", "Public/Ability/GameplayAbilities/Player/Native_GA_ScanHostiles.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_SphereRadius;
 	static const UECodeGen_Private::FBytePropertyParams NewProp_ObjectTypes_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_ObjectTypes;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_EnemyShipClass;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ScanSound;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -63,11 +69,13 @@ const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UNative_GA_Scan
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_UNative_GA_ScanHostiles_Statics::NewProp_ObjectTypes_Inner = { "ObjectTypes", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UEnum_Engine_EObjectTypeQuery, METADATA_PARAMS(0, nullptr) }; // 1798967895
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UNative_GA_ScanHostiles_Statics::NewProp_ObjectTypes = { "ObjectTypes", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UNative_GA_ScanHostiles, ObjectTypes), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ObjectTypes_MetaData), NewProp_ObjectTypes_MetaData) }; // 1798967895
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_UNative_GA_ScanHostiles_Statics::NewProp_EnemyShipClass = { "EnemyShipClass", nullptr, (EPropertyFlags)0x0014000000000015, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UNative_GA_ScanHostiles, EnemyShipClass), Z_Construct_UClass_UClass, Z_Construct_UClass_ABaseShip_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_EnemyShipClass_MetaData), NewProp_EnemyShipClass_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UNative_GA_ScanHostiles_Statics::NewProp_ScanSound = { "ScanSound", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UNative_GA_ScanHostiles, ScanSound), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ScanSound_MetaData), NewProp_ScanSound_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UNative_GA_ScanHostiles_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UNative_GA_ScanHostiles_Statics::NewProp_SphereRadius,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UNative_GA_ScanHostiles_Statics::NewProp_ObjectTypes_Inner,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UNative_GA_ScanHostiles_Statics::NewProp_ObjectTypes,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UNative_GA_ScanHostiles_Statics::NewProp_EnemyShipClass,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UNative_GA_ScanHostiles_Statics::NewProp_ScanSound,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UNative_GA_ScanHostiles_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UNative_GA_ScanHostiles_Statics::DependentSingletons[])() = {
@@ -111,10 +119,10 @@ UNative_GA_ScanHostiles::~UNative_GA_ScanHostiles() {}
 struct Z_CompiledInDeferFile_FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_Ability_GameplayAbilities_Player_Native_GA_ScanHostiles_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UNative_GA_ScanHostiles, UNative_GA_ScanHostiles::StaticClass, TEXT("UNative_GA_ScanHostiles"), &Z_Registration_Info_UClass_UNative_GA_ScanHostiles, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UNative_GA_ScanHostiles), 3640242668U) },
+		{ Z_Construct_UClass_UNative_GA_ScanHostiles, UNative_GA_ScanHostiles::StaticClass, TEXT("UNative_GA_ScanHostiles"), &Z_Registration_Info_UClass_UNative_GA_ScanHostiles, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UNative_GA_ScanHostiles), 3244381935U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_Ability_GameplayAbilities_Player_Native_GA_ScanHostiles_h_2230312970(TEXT("/Script/StarshipSimulator"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_Ability_GameplayAbilities_Player_Native_GA_ScanHostiles_h_2695790791(TEXT("/Script/StarshipSimulator"),
 	Z_CompiledInDeferFile_FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_Ability_GameplayAbilities_Player_Native_GA_ScanHostiles_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_Ability_GameplayAbilities_Player_Native_GA_ScanHostiles_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -23,5 +23,5 @@ class STARSHIPSIMULATOR_API IPlayerUIInterface
 	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
 	virtual UPlayerWidget* GetUIComponent() const = 0;
-	virtual void UpdateScannedActors(TArray<AActor*> ScannedActors) const = 0 ;
+	virtual void UpdateScannedActors(TArray<AActor*> ScannedActors)  = 0 ;
 };

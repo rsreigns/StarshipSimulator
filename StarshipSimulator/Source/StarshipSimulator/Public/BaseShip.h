@@ -57,7 +57,7 @@ public:
 
 
 #pragma region Getters
-
+public:
 	FORCEINLINE UStaticMeshComponent* GetShipMesh() const { return ShipMesh; }
 	FORCEINLINE UBaseASC* GetBaseASC() const { return BaseASC; }
 	

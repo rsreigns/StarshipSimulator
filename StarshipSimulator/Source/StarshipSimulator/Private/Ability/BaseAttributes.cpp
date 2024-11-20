@@ -7,10 +7,10 @@
 
 UBaseAttributes::UBaseAttributes()
 {
-	InitCurrentHealth(50.f);
-	InitMaxHealth(50.f);
-	InitShield(40.f);
-	InitMaxShield(40.f);
+	InitCurrentHealth(400.f);
+	InitMaxHealth(500.f);
+	InitShield(300.f);
+	InitMaxShield(400.f);
 }
 
 void UBaseAttributes::PostGameplayEffectExecute(const struct FGameplayEffectModCallbackData& Data)

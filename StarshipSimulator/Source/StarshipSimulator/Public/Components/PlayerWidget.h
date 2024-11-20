@@ -13,5 +13,6 @@ UCLASS()
 class STARSHIPSIMULATOR_API UPlayerWidget : public UWidgetComponent
 {
 	GENERATED_BODY()
-	
+public:
+
 };

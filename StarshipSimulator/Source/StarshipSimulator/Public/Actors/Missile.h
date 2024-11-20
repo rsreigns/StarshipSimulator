@@ -12,7 +12,7 @@ class UStaticMeshComponent;
 class UCapsuleComponent;
 
 class UGameplayEffect;
-class UParticleSystem;
+class UNiagaraSystem;
 
 UCLASS()
 class STARSHIPSIMULATOR_API AMissile : public AActor
@@ -23,9 +23,9 @@ public:
 	AMissile();
 	UPROPERTY(EditDefaultsOnly,BlueprintReadOnly,Category="Components")
 	UProjectileMovementComponent* ProjectileMovement;
-	
-	UPROPERTY(EditDefaultsOnly,BlueprintReadOnly,Category="Components")
-	UParticleSystemComponent* ParticleSystem;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Components")
+	UNiagaraSystem* NiagaraSystem;
 	
 	UPROPERTY(EditDefaultsOnly,BlueprintReadOnly,Category="Components")
 	UStaticMeshComponent* MissileMesh;
@@ -41,8 +41,6 @@ public:
 #pragma endregion
 #pragma  region CoreVariables
 	
-	UPROPERTY(EditDefaultsOnly,BlueprintReadOnly,Category="Missile")
-	UGameplayEffect* DamageEffect;
 	UPROPERTY(EditDefaultsOnly,BlueprintReadOnly,Category="Missile")
 	UParticleSystem* ExplosionEffect;
 	

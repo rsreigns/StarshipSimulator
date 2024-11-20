@@ -12,9 +12,9 @@ public class StarshipSimulator : ModuleRules
 		{
 			"Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput",
 			"UMG", "AIModule", "EnhancedInput", "GameplayAbilities",
-			"GameplayTasks", "AnimGraphRuntime"
-			
-		});
+			"GameplayTasks", "AnimGraphRuntime","Niagara","GameplayTags"
+
+        });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 

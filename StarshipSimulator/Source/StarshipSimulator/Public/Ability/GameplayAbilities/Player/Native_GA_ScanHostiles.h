@@ -7,6 +7,7 @@
 #include "Native_GA_ScanHostiles.generated.h"
 
 class ABaseShip;
+class USoundBase;
 
 UCLASS()
 class STARSHIPSIMULATOR_API UNative_GA_ScanHostiles : public UPlayerGABase
@@ -19,6 +20,8 @@ public:
 	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
 	UPROPERTY(EditAnywhere,BlueprintReadOnly,Category="Ability|Scan")
 	TSubclassOf<ABaseShip> EnemyShipClass;
+	UPROPERTY(EditAnywhere,BlueprintReadOnly,Category="Ability|Scan")
+	USoundBase* ScanSound;
 	
 	virtual void InitiateAbility() override;
 	

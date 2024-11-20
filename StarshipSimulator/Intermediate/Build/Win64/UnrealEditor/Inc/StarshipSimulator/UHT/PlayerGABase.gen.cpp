@@ -80,10 +80,10 @@ UPlayerGABase::~UPlayerGABase() {}
 struct Z_CompiledInDeferFile_FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_Ability_GameplayAbilities_PlayerGABase_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPlayerGABase, UPlayerGABase::StaticClass, TEXT("UPlayerGABase"), &Z_Registration_Info_UClass_UPlayerGABase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerGABase), 3767548340U) },
+		{ Z_Construct_UClass_UPlayerGABase, UPlayerGABase::StaticClass, TEXT("UPlayerGABase"), &Z_Registration_Info_UClass_UPlayerGABase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerGABase), 1616366099U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_Ability_GameplayAbilities_PlayerGABase_h_3725260633(TEXT("/Script/StarshipSimulator"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_Ability_GameplayAbilities_PlayerGABase_h_1718739680(TEXT("/Script/StarshipSimulator"),
 	Z_CompiledInDeferFile_FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_Ability_GameplayAbilities_PlayerGABase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_Ability_GameplayAbilities_PlayerGABase_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
