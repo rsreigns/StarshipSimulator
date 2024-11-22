@@ -7,6 +7,7 @@
 #include "BaseGameplayAbility.generated.h"
 
 class UBaseASC;
+class ABaseShip;
 
 UCLASS()
 class STARSHIPSIMULATOR_API UBaseGameplayAbility : public UGameplayAbility
@@ -18,6 +19,8 @@ public:
 
 	UBaseASC* GetBaseASCfromAI();
 
+	ABaseShip* GetBaseShip();
+
 	FActiveGameplayEffectHandle ApplyEffectSpecHandleToTarget(FGameplayEffectSpecHandle& SpecHandle, AActor* Target);
-	
+	FGameplayEffectSpecHandle MakeGESH(TSubclassOf<UGameplayEffect> Effect, float Magnitude);
 };

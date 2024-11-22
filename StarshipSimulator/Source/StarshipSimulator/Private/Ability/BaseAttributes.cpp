@@ -4,6 +4,8 @@
 #include "Ability/BaseAttributes.h"
 #include "GameplayEffectExtension.h"
 
+#include "BaseShip.h"
+#include "StarshipSimulator/DebugHelper.h"
 
 UBaseAttributes::UBaseAttributes()
 {
@@ -20,6 +22,32 @@ void UBaseAttributes::PostGameplayEffectExecute(const struct FGameplayEffectModC
 	{
 		float NewCurrentHealth = FMath::Clamp(GetCurrentHealth(), 0.f,GetMaxHealth());
 		SetCurrentHealth(NewCurrentHealth);
+
+		float HealthPercent = NewCurrentHealth / GetMaxHealth();
+
+		OnHealthChanged.Broadcast(HealthPercent,GetCurrentHealth(),GetMaxHealth());
+
+		AActor* OwningActor = GetActorInfo()->AvatarActor.Get();
+
+		if (OwningActor)
+		{
+			ABaseShip* Ship = Cast<ABaseShip>(OwningActor);
+			if (Ship )
+			{
+				if (NewCurrentHealth == 0.f)
+				{
+					Ship->DestroyShip();
+					Debug::PrintString("Destroyed this ship ", 5.f);
+				}
+
+				if (!Ship->IsPlayerControlled()) // AI Specific Logic
+				{
+					// draw Health UI for n seconds
+					OnDamageReceived.Broadcast();
+				}
+
+			}
+		}
 	}
 	if(Data.EvaluatedData.Attribute == GetShieldAttribute())
 	{

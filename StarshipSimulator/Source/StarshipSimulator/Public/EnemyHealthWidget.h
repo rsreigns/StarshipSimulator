@@ -6,11 +6,14 @@
 #include "Blueprint/UserWidget.h"
 #include "EnemyHealthWidget.generated.h"
 
+class ABaseShip;
 
 UCLASS()
 class STARSHIPSIMULATOR_API UEnemyHealthWidget : public UUserWidget
 {
 	GENERATED_BODY()	
 public:
-	
+	virtual void NativeConstruct() override;
+
+
 };

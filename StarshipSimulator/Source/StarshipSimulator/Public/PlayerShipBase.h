@@ -34,8 +34,7 @@ public:
 	USpringArmComponent* SpringArm;
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite, Category="Components")
 	UPlayerWidget* Widget;
-	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite, Category="Components")
-	USceneComponent* MissileSocket;
+
 	
 #pragma endregion
 	
@@ -71,13 +70,20 @@ public:
 	UPROPERTY(EditDefaultsOnly,BlueprintReadOnly,Category="Ship|Movement")
 	float SpeedMultiplier;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Ship|Camera")
+	float BackCamDistance = 3000.f;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Ship|Camera")
+	FVector ScreenCamLocation = FVector(400.f, 0.f, 0.f);
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Ship|Camera")
+	FVector DefaultCamLocation = FVector(400.f, 0.f, 0.f);
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Ship|Camera")
+	float BackCamZOffset = 1000.f;
 	// Core
+
 	UPROPERTY(BlueprintReadOnly)
-	APlayerController* MyController;
-	int32 HostilesCount;
-	UPROPERTY(BlueprintReadOnly)
-	TObjectPtr<AActor>TargetLockedActor;
-	
+	int32 CurrentCamIndex = 0;
 #pragma endregion
 
 #pragma region CoreFunctions
@@ -88,13 +94,20 @@ public:
 	void HandleLookInput(const FInputActionValue& Value );
 	void HandleSwitchCam(const FInputActionValue& Value );
 
+	virtual void DestroyShip() override;
+	UFUNCTION(BlueprintImplementableEvent)
+	void BP_OnShipDestroyed();
+
 #pragma endregion
 
 #pragma region Getters
+	UFUNCTION(BlueprintPure, BlueprintCallable, Category = "Player|Defaults")
 	FORCEINLINE UCameraComponent* GetCamera() const { return Camera; }
+	UFUNCTION(BlueprintPure, BlueprintCallable, Category = "Player|Defaults")
 	FORCEINLINE USpringArmComponent* GetSpringArm() const { return SpringArm; }
+	UFUNCTION(BlueprintPure, BlueprintCallable, Category = "Player|Defaults")
 	FORCEINLINE UPlayerWidget* GetPlayerWidget() const { return Widget; }
-	FORCEINLINE USceneComponent* GetMissileSocket() const { return MissileSocket; }
+	UFUNCTION(BlueprintPure, BlueprintCallable, Category = "Player|Defaults")
 	FORCEINLINE UStaticMeshComponent* GetInteriorMesh() const { return InteriorMesh; }
 	
 #pragma endregion

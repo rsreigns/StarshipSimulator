@@ -19,15 +19,3 @@ void UPlayerGABase::InitiateAbility()
 	
 }
 
-FGameplayEffectSpecHandle UPlayerGABase::MakeGESH(TSubclassOf<UGameplayEffect> Effect, float Magnitude)
-{
-	if (UBaseASC* ASC = GetPlayerPawn()->GetBaseASC())
-	{
-		FGameplayEffectContextHandle Context = ASC->MakeEffectContext();
-		Context.SetAbility(this);
-		Context.AddSourceObject(GetPlayerPawn());
-		FGameplayEffectSpecHandle SpecHandle = ASC->MakeOutgoingSpec(Effect, 1, Context);
-		return SpecHandle;
-	}
-	return FGameplayEffectSpecHandle();
-}

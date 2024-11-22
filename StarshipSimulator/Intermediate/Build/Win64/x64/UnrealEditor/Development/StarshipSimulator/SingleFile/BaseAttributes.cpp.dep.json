@@ -775,7 +775,16 @@
             "e:\\ue 5.4\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\abilitysystemcomponent.generated.h",
             "e:\\unreal project\\starshipsimulator\\starshipsimulator\\intermediate\\build\\win64\\unrealeditor\\inc\\starshipsimulator\\uht\\baseasc.generated.h",
             "e:\\unreal project\\starshipsimulator\\starshipsimulator\\intermediate\\build\\win64\\unrealeditor\\inc\\starshipsimulator\\uht\\baseattributes.generated.h",
-            "e:\\ue 5.4\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\gameplayeffectextension.h"
+            "e:\\ue 5.4\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\gameplayeffectextension.h",
+            "e:\\unreal project\\starshipsimulator\\starshipsimulator\\source\\starshipsimulator\\public\\baseship.h",
+            "e:\\ue 5.4\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\pawn.h",
+            "e:\\ue 5.4\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\ai\\navigation\\navagentinterface.h",
+            "e:\\ue 5.4\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\navagentinterface.generated.h",
+            "e:\\ue 5.4\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\pawn.generated.h",
+            "e:\\ue 5.4\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\abilitysysteminterface.h",
+            "e:\\ue 5.4\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\abilitysysteminterface.generated.h",
+            "e:\\unreal project\\starshipsimulator\\starshipsimulator\\intermediate\\build\\win64\\unrealeditor\\inc\\starshipsimulator\\uht\\baseship.generated.h",
+            "e:\\unreal project\\starshipsimulator\\starshipsimulator\\source\\starshipsimulator\\debughelper.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

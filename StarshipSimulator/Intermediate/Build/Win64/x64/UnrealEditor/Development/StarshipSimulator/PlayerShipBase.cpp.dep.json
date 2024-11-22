@@ -72,6 +72,10 @@
             "e:\\ue 5.4\\ue_5.4\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\enhancedinputcomponent.generated.h",
             "e:\\ue 5.4\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\springarmcomponent.h",
             "e:\\ue 5.4\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\springarmcomponent.generated.h",
+            "e:\\unreal project\\starshipsimulator\\starshipsimulator\\source\\starshipsimulator\\public\\controller\\myplayercontroller.h",
+            "e:\\ue 5.4\\ue_5.4\\engine\\source\\runtime\\aimodule\\classes\\genericteamagentinterface.h",
+            "e:\\ue 5.4\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\aimodule\\uht\\genericteamagentinterface.generated.h",
+            "e:\\unreal project\\starshipsimulator\\starshipsimulator\\intermediate\\build\\win64\\unrealeditor\\inc\\starshipsimulator\\uht\\myplayercontroller.generated.h",
             "e:\\unreal project\\starshipsimulator\\starshipsimulator\\source\\starshipsimulator\\debughelper.h"
         ],
         "ImportedModules": [],

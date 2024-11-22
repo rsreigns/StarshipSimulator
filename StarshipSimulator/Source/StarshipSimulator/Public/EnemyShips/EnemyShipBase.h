@@ -16,4 +16,11 @@ class STARSHIPSIMULATOR_API AEnemyShipBase : public ABaseShip
 public:
 	AEnemyShipBase();
 	
+
+	virtual void DestroyShip()override;
+	UFUNCTION(BlueprintImplementableEvent)
+	void ShowWidget();
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "DelegateFunction|Health")
+	void UpdateHealthUI(float NewHealthPercent, float CurrentHealth, float MaxHealth);
 };

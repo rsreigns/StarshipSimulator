@@ -18,6 +18,6 @@ public:
 
 	virtual void InitiateAbility() override;
 
-	FGameplayEffectSpecHandle MakeGESH(TSubclassOf<UGameplayEffect> Effect, float Magnitude);
+
 	
 };

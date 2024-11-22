@@ -11,7 +11,8 @@
 #include "TimerManager.h"
 
 #include  "Ability/BaseASC.h"
-#include "EnemyShips/EnemyShipBase.h"
+//#include "EnemyShips/EnemyShipBase.h"
+#include "BaseShip.h"
 
 
 AMissile::AMissile()
@@ -33,6 +34,8 @@ void AMissile::BeginPlay()
 {
 	Super::BeginPlay();
 	CapsuleComp->OnComponentBeginOverlap.AddDynamic(this,&ThisClass::OnBeginOverlap);
+	
+	GetWorldTimerManager().SetTimer(SelfDestructTimer, this, &ThisClass::SelfDestruct, 7.f);
 }
 
 void AMissile::Tick(float DeltaTime)
@@ -43,29 +46,36 @@ void AMissile::Tick(float DeltaTime)
 void AMissile::OnBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
 	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	if(AEnemyShipBase* OtherShip = Cast<AEnemyShipBase>(OtherActor))
+	ABaseShip* OtherShip = Cast<ABaseShip>(OtherActor);
+	if( OtherActor && OtherShip  && OtherActor != GetOwner() )
 	{
-		if(ExplosionEffect)
-		{
-			FVector HitLocation = GetActorLocation();
-			//UGameplayStatics::SpawnEmitterAttached(ExplosionEffect, RootComponent);
-			UGameplayStatics::SpawnEmitterAtLocation(this,ExplosionEffect,HitLocation);
-		}
-		FTimerHandle DestroyTimerHandle;
-		GetWorld()->GetTimerManager().SetTimer(DestroyTimerHandle,this,&ThisClass::OnExploded,2.f);
-		FGameplayEventData EventData;
-		EventData.Instigator = this;
-		EventData.Target = OtherActor;
-
-		UAbilitySystemBlueprintLibrary::SendGameplayEventToActor(GetOwner(),
-			FGameplayTag::RequestGameplayTag(FName("Player.Event.Missile.Explode")), EventData);
-		SetActorHiddenInGame(true);
-		SetActorEnableCollision(false);
+		SelfDestruct();
+		SelfDestructTimer.Invalidate();
+		OverlappedActor = OtherActor;
 	}
 }
 
 void AMissile::OnExploded()
 {
 	Destroy();// Handle putting into pool
+}
+
+void AMissile::SelfDestruct()
+{
+	if (ExplosionEffect)
+	{
+		FVector HitLocation = GetActorLocation();
+		//UGameplayStatics::SpawnEmitterAttached(ExplosionEffect, RootComponent);
+		UGameplayStatics::SpawnEmitterAtLocation(this, ExplosionEffect, HitLocation);
+	}
+	FTimerHandle DestroyTimerHandle;
+	GetWorld()->GetTimerManager().SetTimer(DestroyTimerHandle, this, &ThisClass::OnExploded, 2.f);
+	FGameplayEventData EventData;
+	EventData.Instigator = this;
+	
+	UAbilitySystemBlueprintLibrary::SendGameplayEventToActor(GetOwner(),
+		FGameplayTag::RequestGameplayTag(FName("Player.Event.Missile.Explode")), EventData);
+	SetActorHiddenInGame(true);
+	SetActorEnableCollision(false);
 }
 

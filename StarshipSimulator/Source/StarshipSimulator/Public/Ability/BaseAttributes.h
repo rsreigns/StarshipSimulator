@@ -7,6 +7,12 @@
 #include "Ability/BaseASC.h"
 #include "BaseAttributes.generated.h"
 
+class ABaseShip;
+
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FOnHealthChanged, float, NewHealthPercent,float, NewCurrentHealth,float,MaxHealth);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnDamageReceived);
+
+
 #define ATTRIBUTE_ACCESSORS(ClassName, PropertyName) \
 GAMEPLAYATTRIBUTE_PROPERTY_GETTER(ClassName, PropertyName) \
 GAMEPLAYATTRIBUTE_VALUE_GETTER(PropertyName) \
@@ -20,22 +26,34 @@ class STARSHIPSIMULATOR_API UBaseAttributes : public UAttributeSet
 public:
 	UBaseAttributes();
 
-	UPROPERTY(BlueprintReadOnly, Category="Health")
+#pragma region Variables
+
+	UPROPERTY(BlueprintReadOnly, Category="Attributes|Health")
 	FGameplayAttributeData CurrentHealth;
 	ATTRIBUTE_ACCESSORS(UBaseAttributes,CurrentHealth);
 	
-	UPROPERTY(BlueprintReadOnly, Category="Health")
+	UPROPERTY(BlueprintReadOnly, Category="Attributes|Health")
 	FGameplayAttributeData MaxHealth;
 	ATTRIBUTE_ACCESSORS(UBaseAttributes,MaxHealth);
 
-	UPROPERTY(BlueprintReadOnly, Category="Shield")
+	UPROPERTY(BlueprintReadOnly, Category="Attributes|Shield")
 	FGameplayAttributeData Shield;
 	ATTRIBUTE_ACCESSORS(UBaseAttributes,Shield);
 	
-	UPROPERTY(BlueprintReadOnly, Category="Shield")
+	UPROPERTY(BlueprintReadOnly, Category="Attributes|Shield")
 	FGameplayAttributeData MaxShield;
 	ATTRIBUTE_ACCESSORS(UBaseAttributes,MaxShield);
 
+	UPROPERTY(BlueprintReadOnly,Category="Attributes|Delegate")
+	FOnHealthChanged OnHealthChanged;
+
+	UPROPERTY(BlueprintReadOnly, Category = "Attributes|Delegate")
+	FOnDamageReceived OnDamageReceived;
+#pragma endregion
+
+#pragma region Functions
+
 	virtual void PostGameplayEffectExecute(const struct FGameplayEffectModCallbackData &Data) override;
 	
+#pragma endregion
 };

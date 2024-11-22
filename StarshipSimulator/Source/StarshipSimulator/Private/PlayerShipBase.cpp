@@ -15,28 +15,28 @@
 #include "GameFramework/SpringArmComponent.h"
 
 // Custom Classes
-
+#include "Controller/MyPlayerController.h"
 
 #include "StarshipSimulator/DebugHelper.h"
 
 APlayerShipBase::APlayerShipBase()
 {
 	InteriorMesh = CreateDefaultSubobject<UStaticMeshComponent>("InteriorMesh");
+	InteriorMesh->SetupAttachment(ShipMesh);
 	SpringArm = CreateDefaultSubobject<USpringArmComponent>("SpringArm");
+	SpringArm->SetupAttachment(ShipMesh);
 	Camera = CreateDefaultSubobject<UCameraComponent>("Camera");
 	Camera->SetupAttachment(SpringArm);
 
 	Widget = CreateDefaultSubobject<UPlayerWidget>("Widget");
 
-	MissileSocket = CreateDefaultSubobject<USceneComponent>("MissileSocket");
-	MissileSocket->SetupAttachment(GetShipMesh());
 }
 
 void APlayerShipBase::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 	UEnhancedInputComponent* InputComp = Cast<UEnhancedInputComponent>(InputComponent);
-	MyController= Cast<APlayerController>(GetController());
+	AMyPlayerController* MyController = Cast<AMyPlayerController>(GetController());
 	if(InputComp && MyController)
 	{
 		UEnhancedInputLocalPlayerSubsystem* Subsystem =
@@ -61,7 +61,7 @@ UPlayerWidget* APlayerShipBase::GetUIComponent() const
 
 void APlayerShipBase::UpdateScannedActors(TArray<AActor*> ScannedActors) 
 {
-	HostilesCount = ScannedActors.Num();
+	
 }
 
 void APlayerShipBase::InteractStart(const FInputActionValue& Value)
@@ -83,6 +83,41 @@ void APlayerShipBase::HandleLookInput(const FInputActionValue& Value)
 
 void APlayerShipBase::HandleSwitchCam(const FInputActionValue& Value)
 {
+	if (CurrentCamIndex == 0)
+	{
+		CurrentCamIndex = 1;
+		// go from chair seat to screen : spring arm location forward x set in blueprint, length = 0, remove offsets.
+		SpringArm->SetRelativeLocation(ScreenCamLocation);
+		SpringArm->TargetArmLength = 0;
+		return;
+	}
+	if (CurrentCamIndex == 1)
+	{
+		CurrentCamIndex = 2;
+		//go from screen to ship back : SA relative = 0, length = 3000, socket z offset = 1000
+		SpringArm->SetRelativeLocation(FVector::ZeroVector);
+		SpringArm->TargetArmLength = BackCamDistance;
+		SpringArm->SocketOffset = FVector(0.f, 0.f, BackCamZOffset);
+		InteriorMesh->SetHiddenInGame(true,true);
+		ShipMesh->SetHiddenInGame(false);
+		return;
+	}
+	if (CurrentCamIndex == 2)
+	{
+		CurrentCamIndex = 0;
+		//go from ship back to chair seat : length = 0, offset = 0
+		SpringArm->SetRelativeLocation(DefaultCamLocation);
+		SpringArm->TargetArmLength = 0.f;
+		SpringArm->SocketOffset = FVector(0.f, 0.f, 0.f);
+		InteriorMesh->SetHiddenInGame(false,true);
+		ShipMesh->SetHiddenInGame(true);
+		return;
+	}
+}
 
+void APlayerShipBase::DestroyShip()
+{
+	Super::DestroyShip();
+	BP_OnShipDestroyed();
 }
 	

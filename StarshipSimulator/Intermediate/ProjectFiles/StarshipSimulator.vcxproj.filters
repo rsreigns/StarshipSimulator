@@ -104,6 +104,15 @@
     <ClCompile Include="..\..\Source\StarshipSimulator\Private\Components\PlayerWidget.cpp">
       <Filter>Source\StarshipSimulator\Private\Components</Filter>
     </ClCompile>
+    <Filter Include="Source\StarshipSimulator\Private\Controller">
+      <UniqueIdentifier>{36E1B194-C3FE-34D7-B10C-6D0BD8400FB2}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\StarshipSimulator\Private\Controller\MyAIController.cpp">
+      <Filter>Source\StarshipSimulator\Private\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\StarshipSimulator\Private\Controller\MyPlayerController.cpp">
+      <Filter>Source\StarshipSimulator\Private\Controller</Filter>
+    </ClCompile>
     <Filter Include="Source\StarshipSimulator\Private\EnemyShips">
       <UniqueIdentifier>{61EFDC66-31D1-359A-B04B-15B7E981B4DA}</UniqueIdentifier>
     </Filter>
@@ -115,6 +124,18 @@
     </Filter>
     <ClCompile Include="..\..\Source\StarshipSimulator\Private\Interface\PlayerUIInterface.cpp">
       <Filter>Source\StarshipSimulator\Private\Interface</Filter>
+    </ClCompile>
+    <Filter Include="Source\StarshipSimulator\Private\UI">
+      <UniqueIdentifier>{29388ACD-DDB0-3169-AED4-F68A9232074A}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\StarshipSimulator\Private\UI\BaseHealthWidget.cpp">
+      <Filter>Source\StarshipSimulator\Private\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\StarshipSimulator\Private\UI\MyHUD.cpp">
+      <Filter>Source\StarshipSimulator\Private\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\StarshipSimulator\Private\UI\PlayerHealthWidget.cpp">
+      <Filter>Source\StarshipSimulator\Private\UI</Filter>
     </ClCompile>
     <Filter Include="Source\StarshipSimulator\Public">
       <UniqueIdentifier>{50C23ECA-C07D-36AB-B2AC-5129E6F9B0EF}</UniqueIdentifier>
@@ -170,6 +191,15 @@
     <ClInclude Include="..\..\Source\StarshipSimulator\Public\Components\PlayerWidget.h">
       <Filter>Source\StarshipSimulator\Public\Components</Filter>
     </ClInclude>
+    <Filter Include="Source\StarshipSimulator\Public\Controller">
+      <UniqueIdentifier>{96AF7A7C-73A0-3D6D-A6F9-492A5FC34A6A}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\StarshipSimulator\Public\Controller\MyAIController.h">
+      <Filter>Source\StarshipSimulator\Public\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\StarshipSimulator\Public\Controller\MyPlayerController.h">
+      <Filter>Source\StarshipSimulator\Public\Controller</Filter>
+    </ClInclude>
     <Filter Include="Source\StarshipSimulator\Public\EnemyShips">
       <UniqueIdentifier>{59440769-37EC-3479-BC8E-B48EC232CAF0}</UniqueIdentifier>
     </Filter>
@@ -181,6 +211,18 @@
     </Filter>
     <ClInclude Include="..\..\Source\StarshipSimulator\Public\Interface\PlayerUIInterface.h">
       <Filter>Source\StarshipSimulator\Public\Interface</Filter>
+    </ClInclude>
+    <Filter Include="Source\StarshipSimulator\Public\UI">
+      <UniqueIdentifier>{9DACF57A-B30D-38A4-B1DE-B480215139B3}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\StarshipSimulator\Public\UI\BaseHealthWidget.h">
+      <Filter>Source\StarshipSimulator\Public\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\StarshipSimulator\Public\UI\MyHUD.h">
+      <Filter>Source\StarshipSimulator\Public\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\StarshipSimulator\Public\UI\PlayerHealthWidget.h">
+      <Filter>Source\StarshipSimulator\Public\UI</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -21,7 +21,8 @@ ABaseShip::ABaseShip()
 	BaseASC = CreateDefaultSubobject<UBaseASC>("BaseASC");
 	BaseAttributes = CreateDefaultSubobject<UBaseAttributes>("BaseAttributes");
 
-	//OnTakeAnyDamage.AddDynamic(this,&ThisClass::OnTakeDamage);
+	MissileSocket = CreateDefaultSubobject<USceneComponent>("MissileSocket");
+	MissileSocket->SetupAttachment(GetShipMesh());
 }
 
 void ABaseShip::BeginPlay()
@@ -52,6 +53,12 @@ void ABaseShip::PossessedBy(AController* NewController)
 {
 	Super::PossessedBy(NewController);
 	BaseASC->InitAbilityActorInfo(this,this);
+}
+
+void ABaseShip::DestroyShip()
+{
+	SetActorHiddenInGame(true);
+	BaseASC->ExecuteGameplayCue(FGameplayTag::RequestGameplayTag(FName("GameplayCue.VFX.Ship.Destroy")));
 }
 
 /*

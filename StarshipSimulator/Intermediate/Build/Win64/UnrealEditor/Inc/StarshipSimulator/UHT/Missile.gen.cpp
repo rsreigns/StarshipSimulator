@@ -150,12 +150,16 @@ struct Z_Construct_UClass_AMissile_Statics
 		{ "Category", "Missile" },
 		{ "ModuleRelativePath", "Public/Actors/Missile.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OverlappedActor_MetaData[] = {
+		{ "ModuleRelativePath", "Public/Actors/Missile.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ProjectileMovement;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_NiagaraSystem;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_MissileMesh;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CapsuleComp;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ExplosionEffect;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_OverlappedActor;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -172,12 +176,14 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMissile_Stati
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMissile_Statics::NewProp_MissileMesh = { "MissileMesh", nullptr, (EPropertyFlags)0x001000000009001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMissile, MissileMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MissileMesh_MetaData), NewProp_MissileMesh_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMissile_Statics::NewProp_CapsuleComp = { "CapsuleComp", nullptr, (EPropertyFlags)0x001000000009001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMissile, CapsuleComp), Z_Construct_UClass_UCapsuleComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CapsuleComp_MetaData), NewProp_CapsuleComp_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMissile_Statics::NewProp_ExplosionEffect = { "ExplosionEffect", nullptr, (EPropertyFlags)0x0010000000010015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMissile, ExplosionEffect), Z_Construct_UClass_UParticleSystem_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ExplosionEffect_MetaData), NewProp_ExplosionEffect_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMissile_Statics::NewProp_OverlappedActor = { "OverlappedActor", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMissile, OverlappedActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OverlappedActor_MetaData), NewProp_OverlappedActor_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMissile_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMissile_Statics::NewProp_ProjectileMovement,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMissile_Statics::NewProp_NiagaraSystem,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMissile_Statics::NewProp_MissileMesh,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMissile_Statics::NewProp_CapsuleComp,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMissile_Statics::NewProp_ExplosionEffect,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMissile_Statics::NewProp_OverlappedActor,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AMissile_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AMissile_Statics::DependentSingletons[])() = {
@@ -220,10 +226,10 @@ AMissile::~AMissile() {}
 struct Z_CompiledInDeferFile_FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_Actors_Missile_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMissile, AMissile::StaticClass, TEXT("AMissile"), &Z_Registration_Info_UClass_AMissile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMissile), 578888944U) },
+		{ Z_Construct_UClass_AMissile, AMissile::StaticClass, TEXT("AMissile"), &Z_Registration_Info_UClass_AMissile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMissile), 1559594952U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_Actors_Missile_h_1383964889(TEXT("/Script/StarshipSimulator"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_Actors_Missile_h_3024258288(TEXT("/Script/StarshipSimulator"),
 	Z_CompiledInDeferFile_FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_Actors_Missile_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_Actors_Missile_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -8,6 +8,7 @@
 #include "GameFramework/ProjectileMovementComponent.h"
 
 #include "Abilities/Tasks/AbilityTask_WaitGameplayEvent.h"
+#include "Kismet/KismetSystemLibrary.h"
 
 #include "StarshipSimulator/DebugHelper.h"
 
@@ -24,17 +25,18 @@ void UNative_GAMissile::ActivateAbility(const FGameplayAbilitySpecHandle Handle,
 
 	if (Missile)
 	{
-		APlayerShipBase* PlayerPawn = GetPlayerPawn();
+		ABaseShip* OwningPawn = GetBaseShip();
+		if (!OwningPawn) return;
 		FActorSpawnParameters SpawnParams;
-		SpawnParams.Owner = Cast<AActor>(PlayerPawn);
+		SpawnParams.Owner = GetAvatarActorFromActorInfo();
 		SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
-		const FTransform Transform = PlayerPawn->GetMissileSocket()->GetComponentTransform();
-		LockedTarget = PlayerPawn->TargetLockedActor;
+		const FTransform Transform = OwningPawn->GetMissileSocket()->GetComponentTransform();
+		LockedTarget = OwningPawn->TargetLockedActor;
 		if (LockedTarget)
 		{
 			if (USceneComponent* SceneComp = LockedTarget->GetComponentByClass<USceneComponent>())
 			{
-				AMissile* SpawnedMissile = GetWorld()->SpawnActor<AMissile>(Missile, Transform, SpawnParams);
+				SpawnedMissile = GetWorld()->SpawnActor<AMissile>(Missile, Transform, SpawnParams);
 				// Handle taking from pool instead
 				SpawnedMissile->ProjectileMovement->HomingTargetComponent = SceneComp;
 			}
@@ -66,8 +68,28 @@ void UNative_GAMissile::ActivateAbility(const FGameplayAbilitySpecHandle Handle,
 
 void UNative_GAMissile::OnGameplayEventReceived(FGameplayEventData Payload)
 {
+	if (!IsValid(SpawnedMissile)) return;
 	Debug::PrintString("EventRecieved for explosion");
-	FGameplayEffectSpecHandle SpecHandle = MakeGESH(DamageGE, 50.f);
-	ApplyEffectSpecHandleToTarget(SpecHandle, LockedTarget);
+
+
+	TArray<AActor*> OverlappingShips;
+	TArray<AActor*> IgnoredActors;
+	IgnoredActors.Add(GetAvatarActorFromActorInfo());
+	UKismetSystemLibrary::SphereOverlapActors(SpawnedMissile,SpawnedMissile->GetActorLocation(),OverlapRadius,ObjectTypes,
+		ABaseShip::StaticClass(), IgnoredActors, OverlappingShips);
+
+	for (AActor* Ship : OverlappingShips)
+	{
+		if (!IsValid(Ship)) continue;
+		if (!IsValid(SpawnedMissile)) return;
+		float DistanceValue = FVector::Distance(SpawnedMissile->GetActorLocation(), Ship->GetActorLocation());
+		float Distance = FMath::Clamp(DistanceValue,0,DistanceThreshold);
+		float DamageMultiplier = 1 - Distance/ DistanceThreshold;
+		float AppliedDamage = BaseDamage* DamageMultiplier;
+		FGameplayEffectSpecHandle SpecHandle = MakeGESH(DamageGE, AppliedDamage);
+		if (!SpecHandle.IsValid()) continue;
+		ApplyEffectSpecHandleToTarget(SpecHandle, Ship);
+	}
+	
 	EndAbility(CurrentSpecHandle, CurrentActorInfo, CurrentActivationInfo, false, false);
 }

@@ -3,3 +3,13 @@
 
 #include "EnemyHealthWidget.h"
 
+#include "Ability/BaseAttributes.h"
+#include "BaseShip.h"
+
+void UEnemyHealthWidget::NativeConstruct()
+{
+	Super::NativeConstruct();
+
+}
+
+

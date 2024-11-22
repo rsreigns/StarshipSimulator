@@ -9,10 +9,21 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UBaseASC;
+class UBaseAttributes;
+class USceneComponent;
+class UStaticMeshComponent;
 #ifdef STARSHIPSIMULATOR_BaseShip_generated_h
 #error "BaseShip.generated.h already included, missing '#pragma once' in BaseShip.h"
 #endif
 #define STARSHIPSIMULATOR_BaseShip_generated_h
+
+#define FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_BaseShip_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execGetBaseAttributeSet); \
+	DECLARE_FUNCTION(execGetMissileSocket); \
+	DECLARE_FUNCTION(execGetBaseASC); \
+	DECLARE_FUNCTION(execGetShipMesh);
+
 
 #define FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_BaseShip_h_19_INCLASS_NO_PURE_DECLS \
 private: \
@@ -40,6 +51,7 @@ public: \
 #define FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_BaseShip_h_19_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_BaseShip_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_BaseShip_h_19_INCLASS_NO_PURE_DECLS \
 	FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_BaseShip_h_19_ENHANCED_CONSTRUCTORS \
 private: \

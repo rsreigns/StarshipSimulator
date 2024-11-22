@@ -9,11 +9,23 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UCameraComponent;
+class UPlayerWidget;
+class USpringArmComponent;
+class UStaticMeshComponent;
 #ifdef STARSHIPSIMULATOR_PlayerShipBase_generated_h
 #error "PlayerShipBase.generated.h already included, missing '#pragma once' in PlayerShipBase.h"
 #endif
 #define STARSHIPSIMULATOR_PlayerShipBase_generated_h
 
+#define FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_PlayerShipBase_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execGetInteriorMesh); \
+	DECLARE_FUNCTION(execGetPlayerWidget); \
+	DECLARE_FUNCTION(execGetSpringArm); \
+	DECLARE_FUNCTION(execGetCamera);
+
+
+#define FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_PlayerShipBase_h_24_CALLBACK_WRAPPERS
 #define FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_PlayerShipBase_h_24_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAPlayerShipBase(); \
@@ -40,6 +52,8 @@ public: \
 #define FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_PlayerShipBase_h_24_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_PlayerShipBase_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_PlayerShipBase_h_24_CALLBACK_WRAPPERS \
 	FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_PlayerShipBase_h_24_INCLASS_NO_PURE_DECLS \
 	FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_PlayerShipBase_h_24_ENHANCED_CONSTRUCTORS \
 private: \

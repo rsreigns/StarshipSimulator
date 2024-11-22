@@ -6,6 +6,7 @@
 #include "AbilitySystemBlueprintLibrary.h"
 
 #include "Ability/BaseASC.h"
+#include "BaseShip.h"
 
 void UBaseGameplayAbility::InitiateAbility()
 {
@@ -18,6 +19,13 @@ UBaseASC* UBaseGameplayAbility::GetBaseASCfromAI()
 	return nullptr;
 }
 
+ABaseShip* UBaseGameplayAbility::GetBaseShip()
+{
+	ABaseShip* Ship = Cast<ABaseShip>(GetAvatarActorFromActorInfo());
+	if (Ship) return Ship;
+	return nullptr;
+}
+
 FActiveGameplayEffectHandle UBaseGameplayAbility::ApplyEffectSpecHandleToTarget(FGameplayEffectSpecHandle& SpecHandle, AActor* Target)
 {
 	UAbilitySystemComponent* TargetASC = UAbilitySystemBlueprintLibrary::GetAbilitySystemComponent(Target);
@@ -27,4 +35,17 @@ FActiveGameplayEffectHandle UBaseGameplayAbility::ApplyEffectSpecHandleToTarget(
 		return AGEH;
 	}
 	return FActiveGameplayEffectHandle();
+}
+
+FGameplayEffectSpecHandle UBaseGameplayAbility::MakeGESH(TSubclassOf<UGameplayEffect> Effect, float Magnitude)
+{
+	if (UBaseASC* ASC = GetBaseShip()->GetBaseASC())
+	{
+		FGameplayEffectContextHandle Context = ASC->MakeEffectContext();
+		Context.SetAbility(this);
+		Context.AddSourceObject(GetBaseShip());
+		FGameplayEffectSpecHandle SpecHandle = ASC->MakeOutgoingSpec(Effect, 1, Context);
+		return SpecHandle;
+	}
+	return FGameplayEffectSpecHandle();
 }

@@ -1,0 +1,20 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\unreal project\\starshipsimulator\\starshipsimulator\\intermediate\\build\\win64\\unrealeditor\\inc\\starshipsimulator\\uht\\myhud.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\unreal project\\starshipsimulator\\starshipsimulator\\intermediate\\build\\win64\\x64\\starshipsimulatoreditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "e:\\unreal project\\starshipsimulator\\starshipsimulator\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\starshipsimulator\\definitions.starshipsimulator.h",
+            "e:\\unreal project\\starshipsimulator\\starshipsimulator\\source\\starshipsimulator\\public\\ui\\myhud.h",
+            "e:\\ue 5.4\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\hud.h",
+            "e:\\ue 5.4\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\hudhitbox.h",
+            "e:\\ue 5.4\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\debugtextinfo.h",
+            "e:\\ue 5.4\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\debugtextinfo.generated.h",
+            "e:\\ue 5.4\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\hud.generated.h",
+            "e:\\unreal project\\starshipsimulator\\starshipsimulator\\intermediate\\build\\win64\\unrealeditor\\inc\\starshipsimulator\\uht\\myhud.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

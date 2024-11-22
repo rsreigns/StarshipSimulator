@@ -24,7 +24,7 @@ private: \
 	static void StaticRegisterNativesUNative_GAMissile(); \
 	friend struct Z_Construct_UClass_UNative_GAMissile_Statics; \
 public: \
-	DECLARE_CLASS(UNative_GAMissile, UPlayerGABase, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/StarshipSimulator"), NO_API) \
+	DECLARE_CLASS(UNative_GAMissile, UBaseGameplayAbility, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/StarshipSimulator"), NO_API) \
 	DECLARE_SERIALIZER(UNative_GAMissile)
 
 

@@ -40,11 +40,15 @@ public:
 	UBaseASC* BaseASC;
 	UPROPERTY(EditDefaultsOnly,BlueprintReadOnly,Category="Components")
 	UBaseAttributes* BaseAttributes;
-	
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Components")
+	USceneComponent* MissileSocket;
 #pragma endregion
 
 #pragma region CoreVariables
 
+	UPROPERTY(BlueprintReadWrite, Category = "AI|Target")
+	TObjectPtr<AActor>TargetLockedActor;
 	
 #pragma endregion
 
@@ -52,15 +56,27 @@ public:
 	/*UFUNCTION()
 	void OnTakeDamage(AActor* DamagedActor, float Damage, const class UDamageType* DamageType, 
 	class AController* InstigatedBy, AActor* DamageCauser);*/
+
+	virtual void DestroyShip();
 #pragma endregion
 
 
 
 #pragma region Getters
 public:
+
+	UFUNCTION(BlueprintPure,BlueprintCallable, Category = "Ship|Defaults")
 	FORCEINLINE UStaticMeshComponent* GetShipMesh() const { return ShipMesh; }
+
+	UFUNCTION(BlueprintPure, BlueprintCallable, Category = "Ship|Defaults")
 	FORCEINLINE UBaseASC* GetBaseASC() const { return BaseASC; }
-	
+
+	UFUNCTION(BlueprintPure, BlueprintCallable, Category = "Ship|Defaults")
+	FORCEINLINE USceneComponent* GetMissileSocket() const { return MissileSocket; }
+
+	UFUNCTION(BlueprintPure, BlueprintCallable, Category = "Ship|Defaults")
+	FORCEINLINE UBaseAttributes* GetBaseAttributeSet() const { return BaseAttributes; }
+
 #pragma endregion
 
 
