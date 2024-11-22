@@ -49,6 +49,10 @@ public:
 
 	UPROPERTY(BlueprintReadWrite, Category = "AI|Target")
 	TObjectPtr<AActor>TargetLockedActor;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Attributes|Defaults")
+	float MaxHealth = 500.f;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Attributes|Defaults")
+	float MaxShield = 500.f;
 	
 #pragma endregion
 

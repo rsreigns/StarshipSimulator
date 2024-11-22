@@ -28,6 +28,14 @@ ABaseShip::ABaseShip()
 void ABaseShip::BeginPlay()
 {
 	Super::BeginPlay();
+
+	// set default attributes
+	BaseAttributes->InitMaxHealth(MaxHealth);
+	BaseAttributes->InitMaxShield(MaxShield);
+	BaseAttributes->InitCurrentHealth(MaxHealth);
+	BaseAttributes->InitShield(MaxShield);
+
+	BaseAttributes->OnHealthChanged.Broadcast(1, BaseAttributes->GetCurrentHealth(), BaseAttributes->GetMaxHealth());
 }
 
 
