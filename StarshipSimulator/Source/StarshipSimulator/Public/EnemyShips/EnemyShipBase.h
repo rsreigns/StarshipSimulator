@@ -31,6 +31,8 @@ public:
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "DelegateFunction|Health")
 	void UpdateHealthUI(float NewHealthPercent, float CurrentHealth, float MaxHealthValue);
+	UFUNCTION(BlueprintImplementableEvent)
+	void BP_ToggleOffTargetWidget();
 
 #pragma region Getters
 

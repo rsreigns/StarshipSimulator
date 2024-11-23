@@ -21,10 +21,9 @@
 			"PlayerUIInterface.gen.cpp.obj",
 			"PlayerWidget.gen.cpp.obj",
 			"BaseASC.cpp.obj",
+			"BaseAttributes.cpp.obj",
 			"BaseGameplayAbility.cpp.obj",
 			"PlayerGABase.cpp.obj",
-			"Native_GAMissile.cpp.obj",
-			"Native_GA_LockTarget.cpp.obj",
 			"Native_GA_ScanHostiles.cpp.obj",
 			"Missile.cpp.obj",
 			"PlayerWidget.cpp.obj",
@@ -39,7 +38,8 @@
 			"StarshipSimulator.cpp.obj",
 			"EnemyShipBase.gen.cpp.obj",
 			"StarshipSimulator.init.gen.cpp.obj",
-			"BaseAttributes.cpp.obj",
+			"Native_GAMissile.cpp.obj",
+			"Native_GA_LockTarget.cpp.obj",
 			"BaseShip.cpp.obj",
 			"EnemyShipBase.cpp.obj"
 		]

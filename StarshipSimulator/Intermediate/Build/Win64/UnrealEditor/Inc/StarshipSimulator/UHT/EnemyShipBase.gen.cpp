@@ -17,6 +17,33 @@ UMG_API UClass* Z_Construct_UClass_UWidgetComponent_NoRegister();
 UPackage* Z_Construct_UPackage__Script_StarshipSimulator();
 // End Cross Module References
 
+// Begin Class AEnemyShipBase Function BP_ToggleOffTargetWidget
+static FName NAME_AEnemyShipBase_BP_ToggleOffTargetWidget = FName(TEXT("BP_ToggleOffTargetWidget"));
+void AEnemyShipBase::BP_ToggleOffTargetWidget()
+{
+	ProcessEvent(FindFunctionChecked(NAME_AEnemyShipBase_BP_ToggleOffTargetWidget),NULL);
+}
+struct Z_Construct_UFunction_AEnemyShipBase_BP_ToggleOffTargetWidget_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/EnemyShips/EnemyShipBase.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AEnemyShipBase_BP_ToggleOffTargetWidget_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AEnemyShipBase, nullptr, "BP_ToggleOffTargetWidget", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AEnemyShipBase_BP_ToggleOffTargetWidget_Statics::Function_MetaDataParams), Z_Construct_UFunction_AEnemyShipBase_BP_ToggleOffTargetWidget_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_AEnemyShipBase_BP_ToggleOffTargetWidget()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AEnemyShipBase_BP_ToggleOffTargetWidget_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+// End Class AEnemyShipBase Function BP_ToggleOffTargetWidget
+
 // Begin Class AEnemyShipBase Function GetWidgetComp
 struct Z_Construct_UFunction_AEnemyShipBase_GetWidgetComp_Statics
 {
@@ -199,6 +226,7 @@ struct Z_Construct_UClass_AEnemyShipBase_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_AEnemyShipBase_BP_ToggleOffTargetWidget, "BP_ToggleOffTargetWidget" }, // 2964137587
 		{ &Z_Construct_UFunction_AEnemyShipBase_GetWidgetComp, "GetWidgetComp" }, // 3842690215
 		{ &Z_Construct_UFunction_AEnemyShipBase_OnDestroyedShip, "OnDestroyedShip" }, // 335833248
 		{ &Z_Construct_UFunction_AEnemyShipBase_ShowWidget, "ShowWidget" }, // 1046358338
@@ -255,10 +283,10 @@ AEnemyShipBase::~AEnemyShipBase() {}
 struct Z_CompiledInDeferFile_FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_EnemyShips_EnemyShipBase_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AEnemyShipBase, AEnemyShipBase::StaticClass, TEXT("AEnemyShipBase"), &Z_Registration_Info_UClass_AEnemyShipBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AEnemyShipBase), 1396435202U) },
+		{ Z_Construct_UClass_AEnemyShipBase, AEnemyShipBase::StaticClass, TEXT("AEnemyShipBase"), &Z_Registration_Info_UClass_AEnemyShipBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AEnemyShipBase), 536548184U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_EnemyShips_EnemyShipBase_h_3322135908(TEXT("/Script/StarshipSimulator"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_EnemyShips_EnemyShipBase_h_1477937928(TEXT("/Script/StarshipSimulator"),
 	Z_CompiledInDeferFile_FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_EnemyShips_EnemyShipBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_unreal_project_StarshipSimulator_StarshipSimulator_Source_StarshipSimulator_Public_EnemyShips_EnemyShipBase_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

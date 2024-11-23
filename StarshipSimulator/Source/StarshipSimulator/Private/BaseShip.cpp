@@ -23,6 +23,7 @@ ABaseShip::ABaseShip()
 
 	MissileSocket = CreateDefaultSubobject<USceneComponent>("MissileSocket");
 	MissileSocket->SetupAttachment(GetShipMesh());
+
 }
 
 void ABaseShip::BeginPlay()

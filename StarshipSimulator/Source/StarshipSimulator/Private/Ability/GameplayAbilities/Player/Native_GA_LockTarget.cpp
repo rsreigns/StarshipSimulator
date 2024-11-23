@@ -27,8 +27,17 @@ void UNative_GA_LockTarget::InitiateAbility()
 		if(Enemy)  Debug::PrintString("Enemy is valid", 8.f);
 		AActor* HitActor = Hit.GetActor();
 		if (HitActor)  Debug::PrintString("HitActor is valid", 8.f);
-		if(HitActor )
+		if(HitActor)
 		{
+			AActor* LockedActor = PlayerPawn->TargetLockedActor;
+			if (LockedActor)
+			{
+				AEnemyShipBase* EnemyShip = Cast<AEnemyShipBase>(LockedActor);
+				if (EnemyShip)
+				{
+					EnemyShip->BP_ToggleOffTargetWidget();
+				}
+			}
 			PlayerPawn->TargetLockedActor = HitActor;
 		}
 		else

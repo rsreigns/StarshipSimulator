@@ -47,7 +47,7 @@ public:
 
 #pragma region CoreVariables
 
-	UPROPERTY(BlueprintReadWrite, Category = "AI|Target")
+	UPROPERTY(BlueprintReadWrite,Category = "AI|Target")
 	TObjectPtr<AActor>TargetLockedActor;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Attributes|Defaults")
 	float MaxHealth = 500.f;

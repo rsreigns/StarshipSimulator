@@ -82,11 +82,11 @@ void UNative_GAMissile::OnGameplayEventReceived(FGameplayEventData Payload)
 	{
 		if (!IsValid(Ship)) continue;
 		if (!IsValid(SpawnedMissile)) return;
-		float DistanceValue = FVector::Distance(SpawnedMissile->GetActorLocation(), Ship->GetActorLocation());
-		float Distance = FMath::Clamp(DistanceValue,0,DistanceThreshold);
-		float DamageMultiplier = 1 - Distance/ DistanceThreshold;
-		float AppliedDamage = BaseDamage* DamageMultiplier;
-		FGameplayEffectSpecHandle SpecHandle = MakeGESH(DamageGE, AppliedDamage);
+		//float DistanceValue = FVector::Distance(SpawnedMissile->GetActorLocation(), Ship->GetActorLocation());
+		//float Distance = FMath::Clamp(DistanceValue,0,DistanceThreshold); // move these to EffectExecCalc
+		//float DamageMultiplier = 1 - Distance/ DistanceThreshold;
+		//float AppliedDamage = BaseDamage* DamageMultiplier;
+		FGameplayEffectSpecHandle SpecHandle = MakeGESH(DamageGE, BaseDamage);
 		if (!SpecHandle.IsValid()) continue;
 		ApplyEffectSpecHandleToTarget(SpecHandle, Ship);
 	}
